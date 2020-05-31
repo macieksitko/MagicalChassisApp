@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BtActivity"
+    android:orientation="vertical"
+    android:paddingBottom="30dp"
+
+    >
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="217dp"
+        android:layout_above="@id/searchBtn"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="3dp">
+
+        <Switch
+
+            android:id="@+id/switchBtn"
+
+            android:layout_width="wrap_content"
+
+
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:switchMinWidth="40dp"
+            android:layout_marginLeft="20dp"
+            android:thumb="@drawable/thumb1"
+            android:track="@drawable/track"
+            app:fontFamily="@font/opensansregular" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/bluetoothpngrepocom" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/switchState"
+            android:layout_toEndOf="@+id/switchBtn"
+            android:layout_toRightOf="@+id/switchBtn"
+            android:text="Enabled"
+            android:layout_marginLeft="10dp"
+            android:textSize="17sp"
+            android:layout_centerVertical="true"
+            app:fontFamily="@font/opensansregular">
+
+        </TextView>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/devList"
+        android:layout_width="match_parent"
+        android:layout_height="341dp"
+
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@drawable/rectangle10"
+        android:clipToPadding="true"
+        android:paddingLeft="47dip"
+        android:paddingTop="16dip"
+        android:paddingRight="47dip"
+        android:paddingBottom="16dip"
+
+        >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/pairedBtn"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_above="@id/devList"
+
+        android:background="@drawable/pair"
+        android:gravity="center"
+
+        android:paddingBottom="10dp"
+        android:text="Paired devices"
+        app:fontFamily="@font/opensansregular" />
+
+    <TextView
+        android:id="@+id/searchBtn"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_above="@id/pairedBtn"
+
+        android:background="@drawable/search"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:text="Search for devices"
+        app:fontFamily="@font/opensansregular"
+        />
+
+</RelativeLayout>

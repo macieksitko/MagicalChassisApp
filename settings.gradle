@@ -1,0 +1,2 @@
+include ':app', ':gson-2.4'
+rootProject.name='MyApp'

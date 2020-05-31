@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DriveActivity">
+
+    <TextView
+        android:layout_width="301dp"
+        android:layout_height="96dp"
+        android:gravity="center"
+        android:text="@string/drive_a_robot"
+
+        android:textSize="50sp"
+        app:fontFamily="@font/bebas"
+        app:layout_constraintBottom_toTopOf="@+id/aruduinoController"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/aruduinoController"
+        android:layout_width="378dp"
+
+        android:layout_height="278dp"
+
+        android:src="@drawable/arduinocontroller"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    //buttons for steering
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:id="@+id/okConnected"
+        android:src="@drawable/okconnected"
+        app:layout_constraintRight_toRightOf="@id/aruduinoController"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:id="@+id/notConnected"
+        android:src="@drawable/notconnected"
+        app:layout_constraintRight_toRightOf="@id/aruduinoController"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="166dp"
+        android:layout_height="51dp"
+        android:fontFamily="@font/bebas"
+        android:text="Send a measurement"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aruduinoController"
+        app:layout_constraintVertical_bias="0.076" />
+
+    //buttons for other utilities
+
+    <Button
+        android:id="@+id/forwardBtn"
+        android:layout_width="27dp"
+        android:layout_height="30dp"
+
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/aruduinoController"
+        app:layout_constraintEnd_toEndOf="@+id/aruduinoController"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="@+id/aruduinoController"
+        app:layout_constraintTop_toTopOf="@+id/aruduinoController"
+        app:layout_constraintVertical_bias="0.463" />
+
+    <Button
+        android:id="@+id/turnLeftBtn"
+        android:layout_width="30dp"
+        android:layout_height="29dp"
+
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/aruduinoController"
+        app:layout_constraintEnd_toEndOf="@+id/aruduinoController"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toStartOf="@+id/aruduinoController"
+        app:layout_constraintTop_toTopOf="@+id/aruduinoController"
+        app:layout_constraintVertical_bias="0.603" />
+
+    <Button
+        android:id="@+id/backwardBtn"
+        android:layout_width="29dp"
+        android:layout_height="30dp"
+
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/aruduinoController"
+        app:layout_constraintEnd_toEndOf="@+id/aruduinoController"
+        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintStart_toStartOf="@+id/aruduinoController"
+        app:layout_constraintTop_toBottomOf="@+id/forwardBtn"
+        app:layout_constraintVertical_bias="0.362" />
+
+    <Button
+        android:id="@+id/turnRightBtn"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/aruduinoController"
+        app:layout_constraintEnd_toEndOf="@+id/aruduinoController"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toEndOf="@+id/turnLeftBtn"
+        app:layout_constraintTop_toTopOf="@+id/aruduinoController"
+        app:layout_constraintVertical_bias="0.612" />
+
+    <Button
+        android:id="@+id/buzzerBtn"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+
+        android:layout_marginStart="293dp"
+        android:layout_marginLeft="293dp"
+        android:layout_marginEnd="30dp"
+
+        android:layout_marginRight="40dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/aruduinoController"
+        app:layout_constraintEnd_toEndOf="@+id/aruduinoController"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/aruduinoController"
+        app:layout_constraintTop_toTopOf="@+id/aruduinoController"
+        app:layout_constraintVertical_bias="0.595" />
+
+    <Button
+        android:id="@+id/lightsBtn"
+        android:layout_width="35dp"
+        android:layout_height="36dp"
+
+        android:background="@android:color/transparent"
+
+        app:layout_constraintBottom_toBottomOf="@+id/aruduinoController"
+
+        app:layout_constraintEnd_toStartOf="@+id/buzzerBtn"
+        app:layout_constraintHorizontal_bias="0.882"
+        app:layout_constraintStart_toStartOf="@+id/aruduinoController"
+        app:layout_constraintTop_toTopOf="@+id/aruduinoController"
+        app:layout_constraintVertical_bias="0.604" />
+
+    <Button
+        android:id="@+id/getMeasurementBtn"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/aruduinoController"
+        app:layout_constraintEnd_toEndOf="@+id/aruduinoController"
+        app:layout_constraintHorizontal_bias="0.817"
+        app:layout_constraintStart_toStartOf="@+id/aruduinoController"
+        app:layout_constraintTop_toTopOf="@+id/aruduinoController"
+        app:layout_constraintVertical_bias="0.469" />
+
+    <Button
+        android:id="@+id/unknownBtn2"
+        android:layout_width="33dp"
+        android:layout_height="35dp"
+
+        android:layout_marginBottom="64dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/aruduinoController"
+        app:layout_constraintEnd_toEndOf="@+id/aruduinoController"
+        app:layout_constraintHorizontal_bias="0.814"
+
+        app:layout_constraintStart_toStartOf="@+id/aruduinoController"
+        app:layout_constraintTop_toBottomOf="@+id/getMeasurementBtn"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/latestMeasurement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebas"
+        android:text="_____"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.748"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/send"
+        app:layout_constraintVertical_bias="0.241" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:fontFamily="@font/bebas"
+        android:text="Latest measurement: "
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/latestMeasurement"
+        app:layout_constraintHorizontal_bias="0.777"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/send"
+        app:layout_constraintVertical_bias="0.246" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
